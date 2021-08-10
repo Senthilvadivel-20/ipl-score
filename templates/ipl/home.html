@@ -1,0 +1,205 @@
+<!-- load static file -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <link rel="stylesheet" href="{% static 'ipl/images/home_style.css'%}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <script src="https://kit.fontawesome.com/09e39528d8.js" crossorigin="anonymous"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Score Prediction</title>
+  <link rel="shortcut icon" href="{% static 'ipl/images/ipl_logo.png'%}" type="image/png">
+
+
+  
+
+</head>
+
+<!-- Files loded from static file -->
+<body background="{% static 'ipl/images/Cricket score.gif' %}">
+
+  
+
+<h1>IPL Score Prediction</h1>
+
+<!-- Input form  -->
+
+<form action="{% url 'result' %}" id="form">
+
+    {% csrf_token %}
+
+  
+
+    <label for="venue">Venue :</label>
+    <select name="venue" id="venue">
+      <option value='M Chinnaswamy Stadium'>M Chinnaswamy Stadium</option>
+      <option value='Punjab Cricket Association Stadium, Mohali'>Punjab Cricket Association Stadium, Mohali</option>
+      <option value='Feroz Shah Kotla'>Feroz Shah Kotla</option>
+      <option value='Eden Gardens'>Eden Gardens</option>
+      <option value='Wankhede Stadium'>Wankhede Stadium</option>
+      <option value='Sawai Mansingh Stadium'>Sawai Mansingh Stadium</option>
+      <option value='Rajiv Gandhi International Stadium, Uppal'>Rajiv Gandhi International Stadium, Uppal</option>
+      <option value='MA Chidambaram Stadium, Chepauk'>MA Chidambaram Stadium, Chepauk</option>
+      <option value='Dr DY Patil Sports Academy'>Dr DY Patil Sports Academy</option>
+      <option value='Newlands'>Newlands</option>
+      <option value='St George's Park'>St George's Park</option>
+      <option value='Kingsmead'>Kingsmead</option>
+      <option value='SuperSport Park'>SuperSport Park</option>
+      <option value='Buffalo Park'>Buffalo Park</option>
+      <option value='New Wanderers Stadium'>New Wanderers Stadium</option>
+      <option value='De Beers Diamond Oval'>De Beers Diamond Oval</option>
+      <option value='OUTsurance Oval'>OUTsurance Oval</option>
+      <option value='Brabourne Stadium'>Brabourne Stadium</option>
+      <option value='Sardar Patel Stadium, Motera'>Sardar Patel Stadium, Motera</option>
+      <option value='Barabati Stadium'>Barabati Stadium</option>
+      <option value='Vidarbha Cricket Association Stadium, Jamtha'>Vidarbha Cricket Association Stadium, Jamtha</option>
+      <option value='Himachal Pradesh Cricket Association Stadium'>Himachal Pradesh Cricket Association Stadium</option>
+      <option value='Nehru Stadium'>Nehru Stadium</option>
+      <option value='Holkar Cricket Stadium'>Holkar Cricket Stadium</option>
+      <option value='Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium'>Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium</option>
+      <option value='Subrata Roy Sahara Stadium'>Subrata Roy Sahara Stadium</option>
+      <option value='Shaheed Veer Narayan Singh International Stadium'>Shaheed Veer Narayan Singh International Stadium</option>
+      <option value='JSCA International Stadium Complex'>JSCA International Stadium Complex</option>
+      <option value='Sheikh Zayed Stadium'>Sheikh Zayed Stadium</option>
+      <option value='Sharjah Cricket Stadium'>Sharjah Cricket Stadium</option>
+      <option value='Dubai International Cricket Stadium'>Dubai International Cricket Stadium</option>
+      <option value='Maharashtra Cricket Association Stadium'>Maharashtra Cricket Association Stadium</option>
+      <option value='Punjab Cricket Association IS Bindra Stadium, Mohali'>Punjab Cricket Association IS Bindra Stadium, Mohali</option>
+      <option value='Saurashtra Cricket Association Stadium'>Saurashtra Cricket Association Stadium</option>
+      <option value='Green Park'>Green Park</option>
+      <option value='M.Chinnaswamy Stadium'>M.Chinnaswamy Stadium</option>
+      <option value='MA Chidambaram Stadium'>MA Chidambaram Stadium</option>
+      <option value='Arun Jaitley Stadium'>Arun Jaitley Stadium</option>
+      <option value='Rajiv Gandhi International Stadium'>Rajiv Gandhi International Stadium</option>
+      <option value='Punjab Cricket Association IS Bindra Stadium'>Punjab Cricket Association IS Bindra Stadium</option>
+      <option value='MA Chidambaram Stadium, Chepauk, Chennai'>MA Chidambaram Stadium, Chepauk, Chennai</option>
+      <option value='Wankhede Stadium, Mumbai'>Wankhede Stadium, Mumbai</option>
+
+
+    </select><br><br>
+
+    <label for="innings">Innings</label>
+    <select name="innings" id="innings">
+      <option value=1>1</option>
+    </select><br><br>
+
+
+    <label for="batting_team">Batting_team</label>
+    <select name="batting_team" id="batting_team">
+     
+      <option value="Chennai Super Kings">Chennai Super Kings</option>
+      <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+      <option value="Rajasthan Royals">Rajasthan Royals</option>
+      <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+      <option value="Mumbai Indians">Mumbai Indians</option>
+      <option value="Kings XI Punjab">Kings XI Punjab</option>
+      <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+      <option value="Delhi Capitals">Delhi Capitals</option>
+
+    </select><br><br>
+
+    <label for="bowling_team">Bowling team: </label>
+    <select name="bowling_team" id="bowling_team">
+      <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+      <option value="Chennai Super Kings">Chennai Super Kings</option>
+      <option value="Rajasthan Royals">Rajasthan Royals</option>
+      <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+      <option value="Mumbai Indians">Mumbai Indians</option>
+      <option value="Kings XI Punjab">Kings XI Punjab</option>
+      <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+      <option value="Delhi Capitals">Delhi Capitals</option>
+    </select><br><br>
+
+    
+
+    <label for="over">Balls Bowled </label>
+    <select name="over" id="over">
+      <option value=0>0</option>
+      <option value=1>1</option>
+      <option value=2>2</option>
+      <option value=3>3</option>
+      <option value=4>4</option>
+      <option value=5>5</option>
+      <option value=6>6</option>
+      <option value=7>7</option>
+      <option value=8>8</option>
+      <option value=9>9</option>
+      <option value=10>10</option>
+      <option value=11>11</option>
+      <option value=12>12</option>
+      <option value=13>13</option>
+      <option value=14>14</option>
+      <option value=15>15</option>
+      <option value=16>16</option>
+      <option value=17>17</option>
+      <option value=18>18</option>
+      <option value=19>19</option>
+      
+    </select>
+
+    <select name="balls" id="balls">
+      <option value=1>1</option>
+      <option value=2>2</option>
+      <option value=3>3</option>
+      <option value=4>4</option>
+      <option value=5>5</option>
+      <option value=6>6</option>
+    </select> <br><br>
+ 
+    <label for="run">Runs Scored </label> 
+    <input type="number" id="run" name="run" placeholder="Type runs scored by batting team..." required/><br><br>
+
+    <label for="wicket">Wickets </label> 
+    <input type="number" id='wicket' name="wicket" placeholder="Numbers of wickets..." required/><br><br>
+    
+
+
+<input type="submit" value="Predict"> 
+
+</form>
+
+<!-- Contact -->
+<!-- 
+<div id="contact">
+  <p id="name">Made by Senthil </p>
+  <a target="_blank" href="https://www.linkedin.com/in/senthilsubramaniyam20/"><i class="fab fa-linkedin"></i></a>
+  <a target="_blank" href="https://github.com/Senthilvadivel-20"><i class="fab fa-github-square"></i></a>
+</div> -->
+
+<!-- jquery -->
+<script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+
+<!-- jquery for condition checking         -->
+<script>
+$('#form').submit((e)=>{
+
+  var wickte=$('#wicket').val()
+  var bat=$('#batting_team').val()
+  var bowl=$('#bowling_team').val()
+
+  console.log(bat)
+  console.log(bowl)
+
+  if(bat==bowl){
+    alert("Same team can't be validate")
+    return false
+  }
+
+  if(wickte>9 || wickte<0)
+  {
+    alert('Please enter valid wicket.(i.e 0 to 9)')
+    return false
+  }
+})
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+h1{
+    position: absolute;
+    left:600px;
+    font-size: 450%;
+
+
+    
+    animation: flicker 1.5s infinite alternate;
+    color:black;
+}
+    
+    /* Flickering animation */
+    @keyframes flicker {
+        
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow:none;
+    }    
+    }
+
+
+h2{
+    position: absolute;
+    top: 450px;
+    left:900px;
+    font-size: 150%;
+    font-family: "Sofia", sans-serif;
+    
+    }
+
+/* h3{
+    position: absolute;
+    top: 50px;
+    left:950px;
+    font-size: 150%;
+} */
+
+#team{
+    position: absolute;
+    top: 200px;
+    left:650px;
+    font-size: 150%;
+}
+
+
+/* p{
+    animation: flicker 1.5s infinite alternate;
+    color:black;
+} */
+
+mark{
+    background-color: transparent;
+    animation: flicker 1.5s infinite alternate;
+    color:black;
+}
+
+
+button{
+    position: absolute;
+    top: 600px;
+    left:1000px;
+    width: 10%;
+    background-color: #929196;
+    border-radius: 15px;
+    cursor: pointer;
+
+}
+
+
+a{
+    color:whitesmoke;
+}
+
+.contact{
+    font-size: 90%;
+    color: #f5f5f5;
+    position: absolute;
+    top: 580px;
+    left:1250px;
+    font-family: "Sofia", sans-serif;
+  
+  }
