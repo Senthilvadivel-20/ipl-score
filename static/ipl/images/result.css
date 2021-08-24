@@ -1,15 +1,12 @@
 body{
+    padding-top: 50px;
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
     
   }
 
 h1{
-    position: absolute;
-    left:600px;
-    font-size: 450%;
-
-
     
     animation: flicker 1.5s infinite alternate;
     color:black;
@@ -39,33 +36,15 @@ h1{
 
 
 h2{
-    position: absolute;
-    top: 450px;
-    left:900px;
-    font-size: 150%;
+
     font-family: "Sofia", sans-serif;
     
     }
 
-/* h3{
-    position: absolute;
-    top: 50px;
-    left:950px;
-    font-size: 150%;
-} */
 
 #team{
-    position: absolute;
-    top: 200px;
-    left:650px;
     font-size: 150%;
 }
-
-
-/* p{
-    animation: flicker 1.5s infinite alternate;
-    color:black;
-} */
 
 mark{
     background-color: transparent;
@@ -75,9 +54,6 @@ mark{
 
 
 button{
-    position: absolute;
-    top: 600px;
-    left:1000px;
     width: 10%;
     background-color: #929196;
     border-radius: 15px;
@@ -87,15 +63,12 @@ button{
 
 
 a{
-    color:whitesmoke;
+    color:rgb(2, 1, 1);
 }
 
 .contact{
     font-size: 90%;
-    color: #f5f5f5;
-    position: absolute;
-    top: 580px;
-    left:1250px;
+    color: #050404;
     font-family: "Sofia", sans-serif;
   
   }

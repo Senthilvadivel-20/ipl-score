@@ -16,24 +16,26 @@
 <style>
   /* Backgroung image */
     body{
-      background-image: url("{% static '/ipl/images/result_cover.png'%}");
+      background-image: url("{% static '/ipl/images/stadium.jpg'%}");
     }
   </style>
 <body>
 
-<h1>IPL Score Prediction</h1>
+<h1>IPL Score Prediction</h1><br><br>
 
-<p id="team" > <mark> <strong>'{{bat}}'</strong> </mark> (vs) <mark> <strong>'{{bowl}}'</strong> </mark> </p>
+<p id="team" > <mark> <strong>'{{bat}}'</strong> </mark> (vs) <mark> <strong>'{{bowl}}'</strong> </mark> </p> 
 
-<h2>The predicted Score is <mark>{{target}}</mark></h2>
+<br><br>
+
+<h2>The predicted Score is <mark>{{target}}</mark></h2><br><br><br>
 
 <form action="{% url 'home' %}">
     <button type="submit">Back to Home <i class="fas fa-home"></i> </button>
-</form>
+</form> <br>
 
 <!-- contact -->
 <div class="contact">
-  <p >Made by Senthil </p>
+  <p><strong>Made by Senthil</strong>  </p>
   <a target="_blank" href="https://www.linkedin.com/in/senthilsubramaniyam20/"><i class="fab fa-linkedin"></i></a>
   <a target="_blank" href="https://github.com/Senthilvadivel-20"><i class="fab fa-github-square"></i></a>
 </div>
