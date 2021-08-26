@@ -173,6 +173,7 @@ $('#form').submit((e)=>{
   var wickte=$('#wicket').val()
   var bat=$('#batting_team').val()
   var bowl=$('#bowling_team').val()
+  var run=$('#run').val()
 
   console.log(bat)
   console.log(bowl)
@@ -182,9 +183,14 @@ $('#form').submit((e)=>{
     return false
   }
 
+  if(run<0 || run>250){
+    alert('Please enter Valid Runs')
+    return false
+  }
+
   if(wickte>9 || wickte<0)
   {
-    alert('Please enter valid wicket.(i.e 0 to 9)')
+    alert('Please enter valid wicket. Wicket must be in 0-9.')
     return false
   }
 })
